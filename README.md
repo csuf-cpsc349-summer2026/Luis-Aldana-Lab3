@@ -112,20 +112,6 @@ Hint: an iPad media query may use a larger max width than the phone media query:
     /* tablet styles go here */
 }
 ```
-
----
-
-## Suggested Workflow
-
-1. Render [index.html](index.html) in the browser.
-2. Use DevTools to test the page in desktop, phone, and iPad views.
-3. Observe what breaks before responsive styles are applied.
-4. Uncomment the phone responsive design demo in [styles.css](styles.css).
-5. Refresh the browser and confirm the phone layout works.
-6. Complete the iPad `TODO` section in [styles.css](styles.css).
-7. Refresh the browser and confirm the iPad layout matches the reference.
-8. Test all three device categories again: desktop, tablet, and phone.
-
 ---
 
 ## Apply This to Your Own Movie Portal
@@ -145,6 +131,45 @@ Make sure all major components display properly in each device category:
 
 ---
 
+## Deploy with GitHub Pages
+
+After your responsive layout is working, deploy your movie portal as a static site using GitHub Pages.
+
+1. Publish your repository to GitHub.
+2. Open your repository on GitHub and go to **Settings**.
+
+![GitHub Settings](images/screenshot_github_settings.png)
+
+3. Verify your repository name and remember it. You will need it for the final GitHub Pages URL.
+4. Make sure the repository is public. If it is private, change the repository visibility to public.
+
+![GitHub Repository Visibility](images/screenshot_github_visibility.png)
+
+5. In the repository settings, go to **Pages**.
+6. Under **Build and deployment**, choose **Deploy from a branch**.
+7. Choose the `main` branch if that is the branch you are currently working on.
+8. Click **Save**.
+
+![GitHub Pages Settings](images/screenshot_github_pages.png)
+
+After GitHub finishes deploying, your page should be available at:
+
+```text
+https://csuf-cpsc349-summer2026.github.io/<your repo name>/
+```
+
+For example, the reference link for this lab is:
+
+[https://csuf-cpsc349-summer2026.github.io/cpsc-349-sm26-lab-3/](https://csuf-cpsc349-summer2026.github.io/cpsc-349-sm26-lab-3/)
+
+Notice that the reference page should render properly on a computer, but it may not render properly on a phone yet. Your job is to fix the phone and iPad rendering, then deploy your own movie portal instead of only relying on the reference version.
+
+You can check the deployment status in the GitHub Pages section after saving.
+
+![GitHub Pages Deployed](images/screenshot_github_pages_deployed.png)
+
+---
+
 ## Submission Requirements
 
 Students must submit:
@@ -152,8 +177,5 @@ Students must submit:
 1. Updated Lab 3 repository with completed [index.html](index.html), [styles.css](styles.css), and [README.md](README.md)
 2. A screenshot showing the phone layout working
 3. A screenshot showing the iPad/tablet layout working
-4. Evidence that the same responsive design approach was applied to the personalized movie portal
-
-Optional README note:
-
-Write 2-3 sentences explaining how `@media` helped improve the layout across desktop, tablet, and phone screens.
+4. A working GitHub Pages link for the deployed movie portal
+5. Evidence that the same responsive design approach was applied to the personalized movie portal
