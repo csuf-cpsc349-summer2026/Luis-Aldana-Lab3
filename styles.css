@@ -352,9 +352,48 @@ footer a:hover,
 footer a:focus-visible {
     color: #ffffff;
 }
+/* ==================================================
+   12. Fix Media Overspill
+================================================== */
+.movie-card video,
+.movie-card audio {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
 
-
-
+.movie-card audio {
+    margin-top: 0.5rem;
+}
+/* TODO: Add responsive design for iPads */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    header {
+        padding: 2rem 0;
+    }
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 0.25rem;
+        padding: 0.4rem 0.5rem;
+    }
+    nav a{
+        display: block;
+        text-align: center;
+        padding: 0.65rem 0.35rem;
+    }
+    .movie-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .movie-card img {
+        width: min(100%, 250px);
+        height: auto;
+        max-height: 420px;
+        align-self: center;
+    }
 /* DEMO: Uncomment to see effect */
 @media (max-width: 640px) {
     .container {
@@ -391,34 +430,7 @@ footer a:focus-visible {
     }
 } 
 
-/* TODO: Add responsive design for iPads */
-@media (max-width: 1024px) {
-    .container {
-        width: 95%;
-    }
-    header {
-        padding: 2rem 0;
-    }
-    nav ul {
-        width: 100%;
-        justify-content: center;
-        gap: 0.25rem;
-        padding: 0.4rem 0.5rem;
-    }
-    nav a{
-        display: block;
-        text-align: center;
-        padding: 0.65rem 0.35rem;
-    }
-    .movie-grid{
-        grid-template-columns: 1fr 1fr;
-    }
-    .movie-card img {
-        width: min(100%, 250px);
-        height: auto;
-        max-height: 420px;
-        align-self: center;
-    }
+
 
 
 }
